@@ -9,25 +9,87 @@
 
         <title>webgis BUMDES</title>
 
-        <!-- CSS FILES -->        
         <link href="css/bootstrap.min.css" rel="stylesheet">
 
         <link href="css/bootstrap-icons.css" rel="stylesheet">
 
         <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
-<!--
 <style>
-@media (max-width: 768px) {
-    .carousel-image {
-        object-fit: contain !important;
-        height: auto !important;
-        width: 100% !important;
+.hero-text-original {
+    position: absolute;
+    top: 35px;
+    left: 30px;
+    z-index: 10;
+    color: #37263C; /* warna teks sesuai gambar */
+    font-family: "Arial", sans-serif;
+}
+
+/* Outline putih dengan text-shadow */
+.hero-text-original h1,
+.hero-text-original h3 {
+    text-shadow: 
+         -3px -3px 0 #ffffff,
+         0px -3px 0 #ffffff,
+         3px -3px 0 #ffffff,
+        -3px  0px 0 #ffffff,
+         3px  0px 0 #ffffff,
+        -3px  3px 0 #ffffff,
+         0px  3px 0 #ffffff,
+         3px  3px 0 #ffffff,
+         0px  0px 8px #ffffff; 
+}
+
+.hero-text-original h1 {
+    font-size: 4rem;
+    font-weight: 800;
+    margin: 0;
+    line-height: 1.1;
+    letter-spacing: 1px;
+}
+
+.hero-text-original h3 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-top: 8px;
+	color: #eb8170;
+    line-height: 1.1;
+}
+
+/* Responsif untuk HP */
+@media (max-width: 600px) {
+    .hero-text-original {
+        top: 20px;
+        left: 16px;
     }
-    .hero-section-full-height {
-        height: auto !important;
+    .hero-text-original h1 {
+	
+        font-size: 2.7rem;
+    }
+    .hero-text-original h3 {
+	
+        font-size: 2rem;
+    }
+}
+
+/* HP kecil / Samsung A5 */
+@media (max-width: 400px) {
+    .hero-text-original {
+        top: 14px;
+        left: 12px;
+    }
+    .hero-text-original h1 {
+	font-size: 2.7rem;
+	
+    }
+    .hero-text-original h3 {
+	
+        font-size: 2rem;
     }
 }
 </style>
+</style>
+
+<!--
 TemplateMo 581 Kind Heart Charity
 
 https://templatemo.com/tm-581-kind-heart-charity
@@ -133,7 +195,15 @@ https://templatemo.com/tm-581-kind-heart-charity
                             <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <img src="images/webgis.png" class="carousel-image img-fluid" alt="...">
+                                    
+
+										<div class="hero-text-original">
+											<h1>WebGIS BUMDES</h1>
+											<h3>Kabupaten Langkat</h3>
+										</div>
+
+											<img src="images/webgis2.png" class="carousel-image img-fluid" alt="">
+									
                                         
                                         <div class="carousel-caption d-flex flex-column justify-content-end">
                                             <h1>Langkat</h1>
