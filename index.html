@@ -1,309 +1,274 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WebGIS BUMDES - Langkat</title>
 
-        <meta name="description" content="">
-        <meta name="author" content="">
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-icons.css" rel="stylesheet">
+    <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
 
-        <title>webgis BUMDES</title>
+    <style>
+        body {
+            font-family: "Poppins", sans-serif;
+            background-color: #f7f7f7;
+        }
 
-        <link href="css/bootstrap.min.css" rel="stylesheet">
+        .site-header {
+            background: linear-gradient(90deg, #2E7D32, #8BC34A);
+            color: #fff;
+            padding: 8px 0;
+            font-weight: 500;
+        }
 
-        <link href="css/bootstrap-icons.css" rel="stylesheet">
+        .navbar {
+            background: #ffffff !important;
+            border-bottom: 4px solid #8BC34A;
+        }
+        .navbar-brand span {
+            font-weight: 700;
+            color: #2E7D32;
+        }
+        .navbar-brand small {
+            color: #E53935;
+        }
+        .nav-link {
+            font-weight: 600;
+            color: #2E7D32 !important;
+        }
+        .nav-link:hover {
+            color: #E53935 !important;
+        }
 
-        <link href="css/templatemo-kind-heart-charity.css" rel="stylesheet">
-<style>
-.hero-text-original {
-    position: absolute;
-    top: 35px;
-    left: 30px;
-    z-index: 10;
-    color: #37263C; /* warna teks sesuai gambar */
-    font-family: "Arial", sans-serif;
-}
+        .hero-section img {
+                margin-bottom: 0px; /* default aman untuk PC */
+            }
 
-/* Outline putih dengan text-shadow */
-.hero-text-original h1,
-.hero-text-original h3 {
-    text-shadow: 
-         -3px -3px 0 #ffffff,
-         0px -3px 0 #ffffff,
-         3px -3px 0 #ffffff,
-        -3px  0px 0 #ffffff,
-         3px  0px 0 #ffffff,
-        -3px  3px 0 #ffffff,
-         0px  3px 0 #ffffff,
-         3px  3px 0 #ffffff,
-         0px  0px 8px #ffffff; 
-}
+        h2 {
+            font-weight: 700;
+            color: #2E7D32;
+        }
 
-.hero-text-original h1 {
-    font-size: 4rem;
-    font-weight: 800;
-    margin: 0;
-    line-height: 1.1;
-    letter-spacing: 1px;
-}
+        .featured-block {
+            border: 2px solid #8BC34A;
+            border-radius: 12px;
+            padding: 16px;
+            transition: 0.3s;
+            background: #ffffff;
+        }
+        .featured-block:hover {
+            transform: scale(1.05);
+            border-color: #E53935;
+        }
+        .featured-block-text {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2E7D32;
+        }
+        .featured-block strong {
+            color: #E53935;
+        }
 
-.hero-text-original h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    margin-top: 8px;
-	color: #eb8170;
-    line-height: 1.1;
-}
+        .site-footer-bottom {
+            background: linear-gradient(90deg, #8BC34A, #2E7D32);
+            color: white;
+            padding: 15px 0;
+            margin-top: 40px;
+        }
 
-/* Responsif untuk HP */
-@media (max-width: 600px) {
-    .hero-text-original {
-        top: 20px;
-        left: 16px;
+        /* === RESPONSIVE FIX JARAK === */
+        @media (max-width: 600px) {
+            /* Jarak HP tetap seperti sebelumnya */
+            .section-padding {
+                padding-top: 60px !important;
+            }
+            .hero-section img {
+                margin-bottom: 20px !important;
+            }
+            h2.mb-5 {
+                margin-top: 0px !important;
+                margin-bottom: 30px !important;
+            }
+        }
+            .hero-section img {
+                margin-bottom: 20px !important;
+            }
+            h2.mb-5 {
+                margin-top: 0px !important;
+                margin-bottom: 30px !important;
+            }
+        }
+            .section-padding {
+                padding-top: 15px !important; /* cukup dekat tapi aman */
+            }
+            h2.mb-5 {
+                margin-top: 10px !important;
+                margin-bottom: 20px !important;
+            }
+        }
+            .section-padding {
+            padding-top: 60px; /* jarak aman untuk PC */
+        }
+            h2.mb-5 {
+                margin-top: 0px !important; /* aman, tidak negatif */
+                margin-bottom: 20px !important;
+            }
+        }
+            .section-padding {
+                padding-top: 10px !important;
+            }
+            h2.mb-5 {
+                margin-top: 5px !important;  /* Tidak negatif, aman untuk PC */
+                margin-bottom: 20px !important;
+            }
+        }
+            .section-padding {
+                padding-top: 5px !important;
+            }
+            h2.mb-5 {
+                margin-top: -20px !important; /* tidak terlalu negatif agar PC aman */
+                margin-bottom: 15px !important;
+            }
+        }
+            .section-padding {
+                padding-top: 0px !important;
+            }
+            h2.mb-5 {
+                margin-top: -40px !important;
+                margin-bottom: 10px !important;
+            }
+        }
+            h2.mb-5 {
+                margin-top: -25px !important;
+                margin-bottom: 15px !important;
+            }
+        }
+            h2.mb-5 {
+                margin-top: -10px !important;
+                margin-bottom: 25px !important;
+            }
+        }
+        /* Shadow on scroll */
+    .navbar.scrolled {
+        box-shadow: 0 6px 20px rgba(0,0,0,0.35);
+        transition: box-shadow 0.3s ease;
     }
-    .hero-text-original h1 {
-	
-        font-size: 2.7rem;
+    /* Separator shadow under hero image */
+    .hero-separator {
+        width: 100%;
+        height: 20px;
+        margin-top: -20px;
+        box-shadow: 0 -8px 25px rgba(0,0,0,0.12) inset;
     }
-    .hero-text-original h3 {
-	
-        font-size: 2rem;
+    /* Wave Separator */
+    .wave-separator {
+        margin-top: -20px !important;
+        background: transparent !important;
+        height: 0;
+        line-height: 0;
+        /* remove top shadow */
     }
-}
-
-/* HP kecil / Samsung A5 */
-@media (max-width: 400px) {
-    .hero-text-original {
-        top: 14px;
-        left: 12px;
-    }
-    .hero-text-original h1 {
-	font-size: 2.7rem;
-	
-    }
-    .hero-text-original h3 {
-	
-        font-size: 2rem;
-    }
-}
 </style>
-</style>
+</head>
+<body id="section_1">
 
-<!--
-TemplateMo 581 Kind Heart Charity
-
-https://templatemo.com/tm-581-kind-heart-charity
-
--->
-
-    </head>
-    
-    <body id="section_1">
-
-        <header class="site-header">
-            <div class="container">
-                <div class="row">
-                    
-                    <div class="col-lg-8 col-12 d-flex flex-wrap">
-                        <p class="d-flex me-4 mb-0">
-                            <i class="bi-geo-alt me-2"></i>
-                            Kabupaten Langkat Provinsi Sumatera Utara
-                        </p>
-
-                       
-                    </div>
-
-                    <div class="col-lg-3 col-12 ms-auto d-lg-block d-none">
-                        <ul class="social-icon">
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-twitter"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-facebook"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-instagram"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-youtube"></a>
-                            </li>
-
-                            <li class="social-icon-item">
-                                <a href="#" class="social-icon-link bi-whatsapp"></a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
+<header class="site-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-12 d-flex flex-wrap">
+                <p class="d-flex me-4 mb-0">
+                    <i class="bi-geo-alt me-2"></i>
+                    Kabupaten Langkat Provinsi Sumatera Utara
+                </p>
             </div>
-        </header>
+        </div>
+    </div>
+</header>
 
-        <nav class="navbar navbar-expand-lg bg-light shadow-lg">
-            <div class="container">
-                <a class="navbar-brand" href="index.html">
-                    <img src="images/logo3.png" class="logo img-fluid" alt="Kind Heart Charity">
-                    <span>
-                        Webgis
-                        <small>Kabupaten Langkat</small>
-                    </span>
-                </a>
+<nav class="navbar navbar-expand-lg shadow-lg sticky-top" navbar-expand-lg shadow-lg">
+    <div class="container">
+        <a class="navbar-brand" href="index.html">
+            <img src="images/logo3.png" class="logo img-fluid" alt="Logo" style="max-height:70px; width:auto; object-fit:contain;">
+            <span>WebGIS <small>Kabupaten Langkat</small></span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link click-scroll" href="#top">Home</a></li>
+                <li class="nav-item"><a class="nav-link click-scroll" href="#section_2">About</a></li>
+                <li class="nav-item"><a class="nav-link click-scroll" href="#section_6">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
 
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#top">Home</a>
-                        </li>
+<main>
+    <section class="hero-section ">
+        <div class="container-fluid p-0">
+            <img src="images/webgis3.png" class="img-fluid w-100" alt="Hero Image">
+        </div>
+    </section>
 
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_2">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_3"></a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_4"></a>
-                        </li>
-
-                        
-
-                        <li class="nav-item">
-                            <a class="nav-link click-scroll" href="#section_6">Contact</a>
-                        </li>
-
-                        
-                    </ul>
-                </div>
-            </div>
-        </nav>
-
-        <main>
-
-            <section class="hero-section hero-section-full-height">
-                <div class="container-fluid">
-                    <div class="row">
-
-                        <div class="col-lg-12 col-12 p-0">
-                            <div id="hero-slide" class="carousel carousel-fade slide" data-bs-ride="carousel">
-                                <div class="carousel-inner">
-                                    <div class="carousel-item active">
-                                    
-
-										<div class="hero-text-original">
-											<h1>WebGIS BUMDES</h1>
-											<h3>Kabupaten Langkat</h3>
-										</div>
-
-											<img src="images/webgis2.png" class="carousel-image img-fluid" alt="">
-									
-                                        
-                                        <div class="carousel-caption d-flex flex-column justify-content-end">
-                                            <h1>Langkat</h1>
-                                            
-                                            <p>Bersatu Sekata Berpadu Berjaya</p>
-                                        </div>
-                                    </div>
-
-                                    
-                                </div>
-
-                                <button class="carousel-control-prev" type="button" data-bs-target="#hero-slide" data-bs-slide="prev">
-                                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Previous</span>
-                                </button>
-
-                                <button class="carousel-control-next" type="button" data-bs-target="#hero-slide" data-bs-slide="next">
-                                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                                    <span class="visually-hidden">Next</span>
-                                </button>
-                            </div>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
+<!-- Wave Separator -->
+<div class="wave-separator">
+<svg viewBox="0 0 1440 120" preserveAspectRatio="none" style="width:100%; height:40px; display:block;" display:block;">
+<path d="M0,40 C360,120 1080,-40 1440,40 L1440,0 L0,0 Z" fill="#ffffff" style="filter: drop-shadow(0 2px 6px rgba(0,0,0,0.12));"></path>
+</svg>
+</div>
 
 
-            <section class="section-padding">
-                <div class="container">
-                    <div class="row">
+    <section class="section-padding">
+        <div class="container text-center">
+            <h2 class="mb-5">Layanan Kami</h2>
 
-                        <div class="col-lg-10 col-12 text-center mx-auto">
-                            <h2 class="mb-5">Layanan Kami</h2>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
-                            <div class="featured-block d-flex justify-content-center align-items-center">
-                                <a href="maps.html" class="d-block">
-                                    <img src="images/icons/364.jpg" class="featured-block-image img-fluid" alt="">
-
-                                    <p class="featured-block-text">Peta <strong>Interaktif</strong></p>
-                                </a>
-                            </div>
-                        </div>
-
-                        
-
-                    </div>
-                </div>
-            </section>
-
-            
-
-            <div class="site-footer-bottom">
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-lg-6 col-md-7 col-12">
-                            <p class="copyright-text mb-0">Copyright © 2025 <a href="#">Kabupaten Langkat</p>
-                        </div>
-                        
-                        <div class="col-lg-6 col-md-5 col-12 d-flex justify-content-center align-items-center mx-auto">
-                            <ul class="social-icon">
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-twitter"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-facebook"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-instagram"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-linkedin"></a>
-                                </li>
-
-                                <li class="social-icon-item">
-                                    <a href="#" class="social-icon-link bi-youtube"></a>
-                                </li>
-                            </ul>
-                        </div>
-                        
+            <div class="row justify-content-center">
+                <div class="col-lg-3 col-md-6 col-12 mb-4">
+                    <div class="featured-block d-flex justify-content-center align-items-center">
+                        <a href="maps.html" class="d-block text-decoration-none">
+                            <img src="images/icons/364.jpg" class="featured-block-image img-fluid" alt="">
+                            <p class="featured-block-text mt-3">Peta <strong>Interaktif</strong></p>
+                        </a>
                     </div>
                 </div>
             </div>
-        </footer>
+        </div>
+    </section>
+</main>
 
-        <!-- JAVASCRIPT FILES -->
-        <script src="js/jquery.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/jquery.sticky.js"></script>
-        <script src="js/click-scroll.js"></script>
-        <script src="js/counter.js"></script>
-        <script src="js/custom.js"></script>
+<footer>
+    <div class="site-footer-bottom">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6 col-md-7 col-12">
+                    <p class="copyright-text mb-0">Copyright © 2025
+                        <a href="#">Kabupaten Langkat</a></p>
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
 
-    </body>
+<script src="js/jquery.sticky.js"></script>
+<script src="js/click-scroll.js"></script>
+<script src="js/counter.js"></script>
+<script src="js/custom.js"></script>
+<!-- Restored scripts required for sticky navbar -->
+<script>
+    // Add shadow when scrolling
+    window.addEventListener('scroll', function() {
+        const navbar = document.querySelector('.navbar');
+        if (window.scrollY > 10) {
+            navbar.classList.add('scrolled');
+        } else {
+            navbar.classList.remove('scrolled');
+        }
+    });
+</script>
+<script src="js/bootstrap.min.js"></script>
 
+</body>
 </html>
-
